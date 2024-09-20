@@ -35,11 +35,15 @@ todos = [
          })
      
    
-    
-    // function addTodo (newItem){
+    // Add item to todo array
+
+  // function addTodo (newItem){
     // const todo = {
     
     // }
+
+    
+  
     
     // todos.append(todo)
     // }
