@@ -7,22 +7,16 @@ todos = [
         name: "wash clothes",
         status: false,
         id: 1,
-        category: "chores",
-        date: ''
     }, 
     {
         name: "do dishes",
         status: false,
         id: 2,
-        category: "chores",
-        date: ''
     },
     {
         name: "email quote",
         status: false,
         id: 3,
-        category: "work",
-        date: ''
     }
     
     ]
@@ -35,17 +29,25 @@ todos = [
          })
      
    
-    // Add item to todo array
+    // Add item to todo array with button click
+    const todoButton = document.querySelector("button")
+    todoButton.addEventListener("click", (event) => {todos.push(newItem.value)});
+  function addItem (){
+    let newItem = {
+        name: document.getElementById("inputtodo").value,
+    status: false,
+    id: todos.length + 1
+    }
+    todos.push(newItem)
+    console.log(todos)
+    }
 
-  // function addTodo (newItem){
-    // const todo = {
     
-    // }
+   
 
     
-  
     
-    // todos.append(todo)
-    // }
     
+
+   
       
