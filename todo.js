@@ -2,7 +2,7 @@
 
 //Basic starting data model
 
-todos = [
+let todos = [
     {
         name: "wash clothes",
         status: false,
@@ -21,29 +21,52 @@ todos = [
     
     ]
 
-    // Display todos 
-     todos.map((todo) => {
-         let item = document.createElement('li');
-        item.innerText = todo.name
-        document.querySelector('ul').appendChild(item)
-         })
-     
-   
+  
+    
     // Add item to todo array with button click
-    const todoButton = document.querySelector("button")
-    todoButton.addEventListener("click", (event) => {todos.push(newItem.value)});
+    
   function addItem (){
+    const inputField = document.getElementById("inputtodo");
     let newItem = {
-        name: document.getElementById("inputtodo").value,
+        name: inputField.value,
     status: false,
     id: todos.length + 1
     }
     todos.push(newItem)
+    
+    const todoButton = document.querySelector("button")
+    todoButton.addEventListener("click", (event) => {todos.push(newItem.value), inputField.value = ""
+       
+    });
     console.log(todos)
+    return todos
     }
 
+
+
+
+      //  Display todos 
+
     
+   todos.forEach((todo) => {
+    if (todo.status === false) {
+    let item = document.createElement('li')
+    item.innerText = todo.name
+  document.querySelector('ul').appendChild(item)
+    }
+});
+
+    // todos.map((todo) => {
+    //     let item = document.createElement('li');
+    //     item.innerText = todo.name
+    //     document.querySelector('ul').appendChild(item)
+    //      })
+
+
+
+
    
+    
 
     
     
